@@ -1,0 +1,131 @@
+.card {
+  display: block;
+  overflow: hidden;
+  outline: 0;
+  border: 4.5px solid var(--color-yepi);
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: 0 2px 2px rgba(58, 58, 58, 0.08);
+  box-sizing: border-box;
+  background-color: var(--color-yepi);
+  transition: box-shadow var(--animation-duration-common);
+  will-change: box-shadow;
+  user-select: none;
+
+  &,
+  &:visited {
+    color: var(--color-yepi);
+  }
+
+  &--solid-background {
+    &,
+    &:visited {
+      color: var(--color-fuca);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 19px 51px 22px rgba(113, 87, 71, 0.03),
+      11px 28px 18px rgba(113, 87, 71, 0.1),
+      5px 13px 13px rgba(113, 87, 71, 0.17), 1px 3px 7px rgba(113, 87, 71, 0.2);
+  }
+
+  &,
+  &:hover,
+  &:focus {
+    @include tablet {
+      box-shadow: none;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 32px;
+    height: 100%;
+    box-sizing: border-box;
+    background-position: 50%;
+    background-size: cover;
+
+    @include tablet {
+      padding: 16px;
+    }
+
+    &--background {
+      &-facial-cosmetology {
+        background-image: '../img/services/facial-cosmetology.png';
+        background-image: image-set(
+          url('../img/services/facial-cosmetology.webp') type('image/webp') 1x,
+          url('../img/services/facial-cosmetology.png') type('image/png') 1x
+        );
+      }
+
+      &-body-shaping {
+        background-image: '../img/services/body-shaping.png';
+        background-image: image-set(
+          url('../img/services/body-shaping.webp') type('image/webp') 1x,
+          url('../img/services/body-shaping.png') type('image/png') 1x
+        );
+      }
+
+      &-spa-thai {
+        background-image: '../img/services/spa-thai.png';
+        background-image: image-set(
+          url('../img/services/spa-thai.webp') type('image/webp') 1x,
+          url('../img/services/spa-thai.png') type('image/png') 1x
+        );
+      }
+
+      &-beauty-services {
+        background-image: '../img/services/beauty-services.png';
+        background-image: image-set(
+          url('../img/services/beauty-services.webp') type('image/webp') 1x,
+          url('../img/services/beauty-services.png') type('image/png') 1x
+        );
+      }
+
+      &-spa-wellness {
+        background-image: '../img/services/spa-wellness.png';
+        background-image: image-set(
+          url('../img/services/spa-wellness.webp') type('image/webp') 1x,
+          url('../img/services/spa-wellness.png') type('image/png') 1x
+        );
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    flex-shrink: 0;
+    overflow: hidden;
+    font-family: var(--title-font-family);
+    font-size: 2.25rem;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__tags {
+    margin: 1rem 0;
+
+    &__tag {
+      &:nth-child(n + 5) {
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: auto;
+  }
+}

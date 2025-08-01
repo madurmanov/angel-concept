@@ -1,0 +1,27 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: 'KyivTypeSans', 'Open Sans', sans-serif;
+  --title-font-family: 'GTEestiProText', 'Open Sans', sans-serif;
+  --content-width: 1200px;
+  --container-offset: 120px;
+  --container-tablet-offset: 20px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-tablet-width: calc(
+    var(--content-width) + (var(--container-tablet-offset) * 2)
+  );
+
+  // animations duration
+  --animation-duration-common: 0.2s;
+  --animation-duration-swipe: 0.4s;
+
+  // colors
+  // абстрактные имена цветов https://www.fantasynamegenerators.com/graffiti-tags.php
+  --color-yepi: #fff;
+  --color-zend: #faf5f0;
+  --color-cach: #f8f1ea;
+  --color-fuca: #1b1b1b;
+  --color-shep: #1c1c1c;
+  --color-slop: #ae8f78;
+}

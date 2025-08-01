@@ -1,0 +1,50 @@
+.services {
+  &__swapper {
+    display: flex;
+    margin-top: 56px;
+
+    @include tablet {
+      --offset: calc(-1 * var(--container-tablet-offset));
+
+      grid-template-columns: repeat(5, 1fr);
+      overflow-x: auto;
+      margin-top: 40px;
+      margin-right: var(--offset);
+      margin-left: var(--offset);
+
+      .page--is-touch & {
+        overflow-x: hidden;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+
+    @include tablet {
+      grid-template-columns: repeat(5, 1fr);
+      margin-right: var(--container-tablet-offset);
+      margin-left: var(--container-tablet-offset);
+      transform: translateX(0);
+      transition: transform var(--animation-duration-swipe);
+    }
+
+    &__item {
+      grid-column: span 2;
+      border-radius: 20px;
+      height: 420px;
+
+      &--size-half {
+        grid-column: span 3;
+      }
+
+      @include tablet {
+        grid-column: span 1;
+        height: 302px;
+        min-width: 255px;
+      }
+    }
+  }
+}

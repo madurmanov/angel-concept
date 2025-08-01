@@ -1,0 +1,26 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  &__tag {
+    display: block;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 999px;
+    padding: 8px 12px;
+    height: 28px;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--color-shep);
+    background-color: var(--color-cach);
+
+    @include tablet {
+      font-size: 0.75rem;
+    }
+  }
+}
